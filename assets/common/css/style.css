@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+@media all and (max-width: 1000px) {
+  .block-content {
+    position: absolute;
+    display: block !important;
+    text-align: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #262c3c;
+    color: #f8f848;
+    font-size: 18px;
+    font-weight: 300;
+    z-index: 100;
+  }
+
+  .block-content p {
+    margin-top: 45vh;
+  }
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+:root {
+  --primary-color: #262c3c;
+  --secondary-color: #384158;
+  --secondary-hue1-color: #333b50;
+  --secondary-hue2-color: #363e54;
+  --bg-color: #e0e8ed;
+  --main-font-color: #1c202c;
+  --noactive-font-color: #9e9e9e;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+.page {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  padding: 0 !important;
+}
+
+.header {
+  padding: 0 2.5vw;
+  height: 90px;
+  background-color: var(--primary-color);
+  box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+}
+
+.sidebar {
+  min-height: calc(100vh - 90px);
+  height: calc(100%-90px);
+  background-color: var(--secondary-color);
+  padding: 0;
+  padding-top: 2.5vw; 
+}
+
+.sidebar-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav-item {
+  list-style: none;
+}
+
+.sidebar-nav-item a {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 30px;
+  padding-top: 3px;
+  height: 72px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #8d99b7;
+  transition: .15s;
+}
+
+.sidebar-nav-item.active a {
+  background-color: var(--secondary-hue1-color);
+  color: #fff;
+}
+
+.sidebar-nav-item:not(.active) a:hover {
+  background-color: var(--secondary-hue2-color);
+  color: #fff;
+}
+
+.main {
+  padding: 2.5vw;
+  min-height: calc(100vh - 90px);
+}
+
+.root {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 2.5vw;
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.tabs-company {
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+}
+
+.tab-company-item {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.tab-company-item a {
+  height: 70px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--noactive-font-color);
+  border-bottom: 3px solid #e8e8e8;
+  transition: .15s;
+}
+
+.tab-company-item:nth-child(2),
+.tab-company-item:nth-child(3),
+.tab-company-item:nth-child(4) {
+  margin-left: -4px;
+}
+
+.tab-company-item.active a {
+  background-color: #ffffff;
+  border-bottom: 3px solid #ffffff;
+  color: var(--main-font-color);
+}
+
+.tab-company-item:not(.active) a:hover {
+  color: #8d8d8d;
+  background-color: #eeeeee;
+  border-bottom: 3px solid #bdbdbd;
+}
+
+.bank-bills-component,
+.hot-payments-component,
+.payments-component,
+.receipts-component {
+  padding: 0 30px;
+}
+
+.bank-bills-component > h2,
+.hot-payments-component > h2,
+.payments-component > h2,
+.receipts-component > h2 {
+  color: var(--main-font-color);
+  text-transform: uppercase;
+  margin-top: 3vw;
+  font-size: 24px;
+  font-weight: normal;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--bg-color);
+}
+
+.bank-name {
+  color: var(--main-font-color);
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.bank-name img {
+  margin-right: 10px;
+}
+
+.table {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.table thead {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.table thead th {
+  border: none;
+  font-weight: normal;
+  background-color: #f0f0f0;
+}
+
+.search-payments {
+  color: var(--main-font-color);
+  font-size: 16px; 
+  margin: 25px auto;
+  padding: 10px 15px;
+  border-radius: 2px;
+  box-shadow: none !important;
+  outline: none !important;
+  border: 1px solid var(--bg-color);
+}
+
+.search-payments:focus {
+  color: var(--main-font-color);
+  border: 1px solid #ffffff;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3) !important;
+}
+
+.payments tr:hover {
+  background: #fafafa;
+}
+.search-payments::-webkit-input-placeholder {
+  color: #c4c4c4;
+  font-weight: 300;
+}
+
+.bank-name .bill {
+  font-weight: 300;
+}
+
+.receipts-cash {
+  color: rgb(7, 204, 106);
+}
